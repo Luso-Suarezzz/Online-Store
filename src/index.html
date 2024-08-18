@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/build/styles.css">
+    <script src="../public/assets/sweet/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="../public/assets/sweet/sweetalert2.css">
+    <title>Login - OnlineStore</title>
+</head>
+<body>
+    <main id="main">
+        <div class="w-full h-[100vh] bg-[url('../../public/assets/fondo.jpeg')] bg-cover">
+            <div class="w-full h-[100vh] bg-marron-calro bg-opacity-[35%] absolute flex justify-center items-center ">
+                <div class="w-full h-full flex flex-col lg:flex-row justify-center items-center">
+                    <span class="w-full md:w-1/2 justify-center items-center flex">
+                        <img class="rounded-full border-azul border-2 w-[200px] md:w-[400px] h-[200px] md:h-[400px] " src="../../public/assets/Logo.jpg" alt="Logo">
+                    </span>
+                    <div class="mt-8 w-11/12 md:w-3/4 lg:w-1/2 justify-center items-center flex">
+                        <section class="flex flex-col justify-center items-center h-auto w-5/6 px-4 py-16 gap-8 bg-gris rounded-xl border-2 border-azul">
+                            <h2 class="text-4xl text-center font-roboto font-extrabold text-negro">Iniciar Sesion</h2>
+                            <form id="form-login" class="gap-4 w-[75%] flex flex-col justify-center items-center">
+                                <div class="w-full flex flex-col gap-2">
+                                    <label class="text-xl font-bold text-negro">Usuario</label>
+                                    <input type="text" id="username" name="username" class="border-2 rounded-lg bg-blanco border-azul focus:outline-none w-full px-2 py-1 font-hanuman text-md" placeholder="Usuario">
+                                </div>
+                                <div class="w-full flex flex-col gap-2">
+                                    <label class="text-xl font-bold text-negro">Contraseña</label>
+                                    <input type="password" id="password" name="password" class="border-2 rounded-lg bg-blanco border-azul focus:outline-none w-full px-2 py-1 font-hanuman text-md" placeholder="Contraseña">
+                                </div>
+                                <div class="flex flex-col md:flex-row gap-4 justify-center w-full mt-4">
+                                    <button class="bg-azul font-breeSerif text-lg rounded-lg p-2 text-blanco hover:bg-marron-calro transition-all duration-300">Iniciar Sesión</button>
+                                    <button id="register" type="button" class="bg-azul font-breeSerif text-lg rounded-lg p-2 text-blanco hover:bg-marron-calro transition-all duration-300">Registrarme</button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="javascript/index.js"></script>
+</body>
+</html>

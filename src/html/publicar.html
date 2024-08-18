@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/build/styles.css">
+    <script src="../../public/assets/sweet/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="../../public/assets/sweet/sweetalert2.css">
+    <title>Publicar - OnlineStore</title>
+</head>
+<body class="h-full w-full">
+    <header class="h-[80px] bg-gris w-full flex items-center px-4 fixed">
+        <h1 class="w-2/3 md:w-1/3 text-4xl text-azul font-roboto font-bold"><b class="text-marron-calro">O</b>nline <b class="text-marron-calro">S</b>tore</h1>
+        <div class="w-1/3 md:w-2/3 flex justify-end md:invisible">
+            <img class="h-[50px] w-[50px] rounded-full border-2 border-azul hover:cursor-pointer" src="../../public/assets/Logo.jpg" id="toggle-btn" alt="logo">
+        </div>
+        <nav id="sidebar" class="h-[600px] flex justify-center items-center md:relative md:h-full md:-right-0 absolute top-0 -right-full w-2/3 bg-gris transition-all duration-500">
+            <ul class="flex flex-col md:w-full md:flex-row items-center justify-center gap-4">
+                <li id="toggle-cerrar" class="font-breeSerif text-lg text-marron-calro md:invisible hover:cursor-pointer">Cerrar</li>
+                <li class="font-hanuman text-sm md:text-lg hover:cursor-pointer text-negro hover:text-azul transition-all duration-500"><a href="./store.html">Tienda</a></li>
+                <li class="font-hanuman text-sm md:text-lg hover:cursor-pointer text-negro hover:text-azul transition-all duration-500"><a href="">Publicar</a></li>
+                <li class="font-hanuman text-sm md:text-lg hover:cursor-pointer text-negro hover:text-azul transition-all duration-500"><a href="./contactos.html">Contacto</a></li>
+                <li class="font-hanuman text-sm md:text-lg hover:cursor-pointer text-negro hover:text-red-600 transition-all duration-500" id="logout">Cerrar Sesion</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="h-[80px]"></div>
+
+    <main class="p-6 md:p-4 min-h-[100vh] flex items-center justify-center">
+        <div class="h-auto w-full md:w-10/12 bg-blanco rounded-2xl border-2 border-azul">
+            <form id="formStore" class="flex flex-col justify-center items-center gap-4 h-full w-full p-4">
+                <h4 class="font-lato font-bold text-3xl mb-8 text-negro">Publicar Producto</h4>
+                <div class="w-full lg:w-2/3 flex flex-col gap-2">
+                    <label class="text-lg font-bold text-negro">Nombre</label>
+                    <input type="text" name="nombre" id="nombre"  placeholder="Nombre" class="border-[2px] border-azul rounded-lg bg-white focus:outline-none w-full px-2 py-1 font-breeSerif text-md">
+                </div>
+                <div class="w-full lg:w-2/3 flex flex-col gap-2">
+                    <label class="text-lg font-bold text-negro">Categoria</label>
+                    <select name="categoria" id="categoria" class="border-[2px] border-azul rounded-lg bg-white focus:outline-none w-full px-2 py-1 font-breeSerif text-md">
+                        <option value="Tecnologia">Tecnologia</option>
+                        <option value="Moda">Moda</option>
+                        <option value="Electrodomesticos">Electrodomesticos</option>
+                        <option value="Juegos">Juegos</option>
+                        <option value="Servicios">Servicios</option>
+                    </select>
+                </div>
+                <div class="w-full lg:w-2/3 flex flex-col gap-2">
+                    <label class="text-lg font-bold text-negro">Descripcion</label>
+                    <input type="text" name="descripcion" id="descripcion"  placeholder="Descripcion" class="border-[2px] border-azul rounded-lg bg-white focus:outline-none w-full px-2 py-1 font-breeSerif text-md">
+                </div>
+                <div class="flex flex-col md:flex-row gap-4 w-full lg:w-2/3">
+                    <div class="w-full lg:w-2/3 flex flex-col gap-2">
+                        <label class="text-lg font-bold text-negro">Precio</label>
+                        <input type="number" min="0" name="precio" id="precio"  placeholder="Precio" class="border-[2px] border-azul rounded-lg bg-white focus:outline-none w-full px-2 py-1 font-breeSerif text-md">
+                    </div>
+                    <div class="w-full lg:w-2/3 flex flex-col gap-2">
+                        <label class="text-lg font-bold text-negro">Moneda</label>
+                        <input type="text" name="moneda" id="moneda"  placeholder="Moneda" class="border-[2px] border-azul rounded-lg bg-white focus:outline-none w-full px-2 py-1 font-breeSerif text-md">
+                    </div>
+                </div>
+                <div class="w-full lg:w-2/3 flex flex-col gap-2">
+                    <label class="text-lg font-bold text-negro">Imagen</label>
+                    <input type="text" name="imagen" id="imagen"  placeholder="Url de la Imagen" class="border-[2px] border-azul rounded-lg bg-white focus:outline-none w-full px-2 py-1 font-breeSerif text-md">
+                </div>
+                <div class="w-full lg:w-2/3 flex flex-col gap-2">
+                    <label class="text-lg font-bold text-negro">Cantidad</label>
+                    <input type="number" min="0" name="cantidad" id="cantidad"  placeholder="Cantidad del producto" class="border-[2px] border-azul rounded-lg bg-white focus:outline-none w-full px-2 py-1 font-breeSerif text-md">
+                </div>
+                <div class="w-full lg:w-2/3 flex justify-end gap-4 mt-4">
+                    <button type="submit" class="bg-azul px-8 py-2 rounded-xl font-hanuman text-blanco">Agregar</button>       
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../javascript/sidebar.js"></script>
+    <script src="../javascript/publicar.js"></script>
+</body>
+</html>

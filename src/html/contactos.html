@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/build/styles.css">
+    <script src="../../public/assets/sweet/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="../../public/assets/sweet/sweetalert2.css">
+    <title>Contactos - OnlineStore</title>
+</head>
+<body class="h-full w-full">
+    <header class="h-[80px] bg-gris w-full flex items-center px-4 fixed">
+        <h1 class="w-2/3 md:w-1/3 text-4xl text-azul font-roboto font-bold"><b class="text-marron-calro">O</b>nline <b class="text-marron-calro">S</b>tore</h1>
+        <div class="w-1/3 md:w-2/3 flex justify-end md:invisible">
+            <img class="h-[50px] w-[50px] rounded-full border-2 border-azul hover:cursor-pointer" src="../../public/assets/Logo.jpg" id="toggle-btn" alt="logo">
+        </div>
+        <nav id="sidebar" class="h-[600px] flex justify-center items-center md:relative md:h-full md:-right-0 absolute top-0 -right-full w-2/3 bg-gris transition-all duration-500">
+            <ul class="flex flex-col md:w-full md:flex-row items-center justify-center gap-4">
+                <li id="toggle-cerrar" class="font-breeSerif text-lg text-marron-calro md:invisible hover:cursor-pointer">Cerrar</li>
+                <li class="font-hanuman text-sm md:text-lg hover:cursor-pointer text-negro hover:text-azul transition-all duration-500"><a href="./store.html">Tienda</a></li>
+                <li class="font-hanuman text-sm md:text-lg hover:cursor-pointer text-negro hover:text-azul transition-all duration-500"><a href="./publicar.html">Publicar</a></li>
+                <li class="font-hanuman text-sm md:text-lg hover:cursor-pointer text-negro hover:text-azul transition-all duration-500"><a href="">Contacto</a></li>
+                <li class="font-hanuman text-sm md:text-lg hover:cursor-pointer text-negro hover:text-red-600 transition-all duration-500" id="logout">Cerrar Sesion</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="h-[80px]"></div>
+
+    <main class="w-full h-[100vh] p-4 md:p-4 lg:p-8">
+        <div class="w-full h-full flex flex-col md:flex-row justify-center items-center gap-8">
+            <div class="w-full md:w-1/2 h-full flex justify-center items-center p-16">
+                <img class="rounded-full border-4 border-azul" src="../../public/assets/Foto Luis.jpg" alt="Foto desarrollador">
+            </div>
+
+            <section class="w-full md:w-1/2 h-full flex flex-col justify-center items-center gap-4">
+                <h2 class="text-4xl text-azul font-roboto font-bold text-center">Desarrollador del Proyecto</h2>
+                <p class="text-xl text-negro font-hanuman text-center px-8">Para obtener más información sobre el desarrollador del proyecto OnlineStore, puedes contactarlo por medio de sus redes:</p>
+                <ul class="flex gap-4">
+                    <li><a href="https://www.instagram.com/luissuarezhuz?igsh=YzljYTk1ODg3Zg==" class="rounded-full hover:text-azul hover:border-marron-calro transition-all duration-500 bg-blanco p-4 text-5xl flex items-center justify-center border-2 border-azul text-negro"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://github.com/Luis-Suarezzz" class="rounded-full hover:text-azul hover:border-marron-calro transition-all duration-500 bg-blanco p-4 text-5xl flex items-center justify-center border-2 border-azul text-negro"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://wa.me/584247486972" class="rounded-full hover:text-azul hover:border-marron-calro transition-all duration-500 bg-blanco p-4 text-5xl flex items-center justify-center border-2 border-azul text-negro"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="https://www.facebook.com/luissuarezhuzluisjose" class="rounded-full hover:text-azul hover:border-marron-calro transition-all duration-500 bg-blanco p-4 text-5xl flex items-center justify-center border-2 border-azul text-negro"><i class="fa-brands fa-facebook"></i></a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <script src="../javascript/sidebar.js"></script>
+    <script src="https://kit.fontawesome.com/fed6c5b9e1.js" crossorigin="anonymous"></script>
+    <script src="../javascript/store.js"></script>
+</body>
+</html>
